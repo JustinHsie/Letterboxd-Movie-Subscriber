@@ -59,13 +59,28 @@ function SignIn() {
   }
 
   return (
-    <Button id="button-id" variant="info" onClick={signInWithGoogle}>Sign in with Google</Button>
+    <Button 
+      id="button-id" 
+      variant="light" 
+      onClick={signInWithGoogle}>
+      <img 
+        width="20px" 
+        alt="Google sign-in" 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" 
+        style={{marginBottom: "2px", marginRight: "8px"}}
+      />
+        Sign in with Google
+    </Button>
   )
 }
 
 function SignOut() {
   return auth.currentUser && (
-    <Button variant="info" onClick={() => auth.signOut()}>Sign Out</Button>
+    <Button 
+      variant="light" 
+      onClick={() => auth.signOut()}>
+        Sign Out
+    </Button>
   )
 }
 
