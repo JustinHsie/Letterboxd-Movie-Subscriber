@@ -1,1 +1,1 @@
-# movie-watchlist
+# Letterboxd Movie Subscriber
