@@ -1,16 +1,16 @@
 // Get all movies in Letterboxd movie list
 const posterList = document.getElementsByClassName("poster-container");
 
-// Add mouseenter event for each list item
-let len = posterList.length;
-for (let i = 0; i < len; i++) {
-  posterList[i].addEventListener("mouseenter", (event) => {
-    // highlight the mouseenter target
-    event.target.style.transform = "scale(1.5)";
+// Add hover event listeners for each list item
+let posterListLength = posterList.length;
+for (let i = 0; i < posterListLength; i++) {
+  // Scale movie on mouseenter
+  posterList[i].addEventListener("mouseenter", e => {
+    e.target.style.transform = "scale(1.5)";
+  })
   
-    // reset the size after a short delay
-    setTimeout(() => {
-      event.target.style.transform = "";
-    }, 500);
-  }, false);
+  // Remove scale on mouseleave
+  posterList[i].addEventListener("mouseleave", e => {
+    e.target.style.transform = "";
+  })
 }
